@@ -386,7 +386,7 @@ export default function VideoGeneratorApp() {
               <Video className="text-foreground h-6 w-6" />
             </div>
             <h1 className="text-foreground text-2xl font-semibold">
-              meme-from-image
+              reel-from-image
             </h1>
           </div>
           <p className="text-muted-foreground text-sm">

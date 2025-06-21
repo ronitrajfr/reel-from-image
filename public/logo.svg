@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Circular background -->
+  <circle cx="32" cy="32" r="30" fill="#007AFF"/>
+  
+  <!-- Simulated photo area: a rounded rectangle -->
+  <rect x="14" y="18" width="36" height="28" rx="4" fill="#FFFFFF"/>
+
+  <!-- A circle to represent a camera lens on the photo -->
+  <circle cx="32" cy="32" r="8" fill="#007AFF"/>
+  
+  <!-- A small speech bubble as a meme accent (positioned top-right) -->
+  <path d="M44,16 c0,0-2-4-8-4s-8,4-8,4 l2,2 c0,0,2-2,6-2s6,2,6,2 L44,16z" fill="#FFEB3B"/>
+</svg>
