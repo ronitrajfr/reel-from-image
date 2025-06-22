@@ -2,6 +2,7 @@ import "~/styles/globals.css";
 import Providers from "~/components/Provider";
 import { type Metadata } from "next";
 import { Geist } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "reel-from-image",
@@ -20,7 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable}`}>
       <Providers>
-        <body>{children}</body>
+        <body>
+          {children}
+          <Analytics />
+        </body>
       </Providers>
     </html>
   );
