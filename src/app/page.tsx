@@ -8,6 +8,7 @@ const page = () => {
         <Navbar />
         <HeroSection />
       </main>
+      <section className="bg-black">hello man wtf</section>
     </div>
   );
 };

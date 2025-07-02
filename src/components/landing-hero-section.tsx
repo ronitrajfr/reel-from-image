@@ -3,7 +3,7 @@ import { LandingUsableButton } from "./landing-button";
 
 export function HeroSection() {
   return (
-    <section className="flex flex-col items-center justify-center px-6 py-20">
+    <section className="flex flex-col items-center justify-center px-6 py-7">
       <div className="mx-auto max-w-4xl space-y-10 text-center">
         {/* Title */}
         <h1 className="-tracking-4 text-4xl leading-[1.1] font-semibold text-white sm:text-6xl">
@@ -23,12 +23,9 @@ export function HeroSection() {
         </div>
 
         {/* Buttons */}
-        <div className="flex flex-col justify-center gap-4 pt-4 sm:flex-row">
-          <LandingUsableButton variant="primary" size="lg">
-            Sign up for free
-          </LandingUsableButton>
+        <div className="flex flex-col justify-center gap-4 sm:flex-row">
           <LandingUsableButton variant="secondary" size="lg">
-            Book a demo
+            Get Started
           </LandingUsableButton>
         </div>
       </div>
