@@ -1,6 +1,7 @@
 import "~/styles/globals.css";
 import Providers from "~/components/Provider";
 import { type Metadata } from "next";
+import Script from "next/script";
 import { Geist, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 
@@ -30,6 +31,11 @@ export default function RootLayout({
           {children}
           <Analytics />
         </body>
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="1cca7c37-508e-45ea-a047-192e15fa277a"
+        ></script>
       </Providers>
     </html>
   );
