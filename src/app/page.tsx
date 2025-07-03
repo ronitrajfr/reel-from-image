@@ -4,6 +4,8 @@ import { HeroSection } from "~/components/landing-hero-section";
 import AutoText from "~/components/landing-auto-text";
 import { HeroVideoDialogDemo } from "~/components/landing-demo";
 import HeroVideoDialog from "~/components/magicui/hero-video-dialog";
+import FAQ from "~/components/faq-component";
+import { WobbleCardDemo } from "~/components/wobbel-card-landing";
 
 const page = () => {
   return (
@@ -17,24 +19,24 @@ const page = () => {
         <AutoText />
       </section>
       <section className="max-h-screen">
-        <h1 className="mx-auto my-20 flex items-center justify-center text-7xl font-bold">
-          How it works?
-        </h1>
-        <div className="relative mx-auto w-[1300px]">
-          <HeroVideoDialog
-            className="block dark:hidden"
-            animationStyle="top-in-bottom-out"
-            videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
-            thumbnailSrc="https://startup-template-sage.vercel.app/hero-light.png"
-            thumbnailAlt="Hero Video"
-          />
-          <HeroVideoDialog
-            className="hidden dark:block"
-            animationStyle="top-in-bottom-out"
-            videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
-            thumbnailSrc="https://startup-template-sage.vercel.app/hero-dark.png"
-            thumbnailAlt="Hero Video"
-          />
+        <FAQ />
+      </section>
+      <section className="mb-10 flex items-center justify-center">
+        <WobbleCardDemo />
+      </section>
+
+      <section className="mt-7 flex items-center justify-center">
+        <div className="mt-10 mb-10 text-2xl">
+          2025 @{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:font-bold"
+            href="https://x.com/ronitrajfr"
+          >
+            ronitrajfr
+          </a>{" "}
+          - All Rights Reserved - Created by Ronit Raj
         </div>
       </section>
     </div>

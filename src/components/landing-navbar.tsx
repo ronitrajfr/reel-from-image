@@ -1,9 +1,11 @@
+"use client";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import { LandingUsableButton } from "./landing-button";
 import Image from "next/image";
-
+import { useRouter } from "next/navigation";
 export function Navbar() {
+  const router = useRouter();
   return (
     <nav className="flex w-full items-center justify-between px-6 py-4">
       <div className="flex items-center">
@@ -17,25 +19,15 @@ export function Navbar() {
         </Link>
       </div>
 
-      <div className="hidden items-center space-x-8 md:flex">
-        <div className="flex cursor-pointer items-center space-x-1 text-white hover:text-gray-200">
-          <span>Use cases</span>
-          <ChevronDown className="h-4 w-4" />
-        </div>
-        <div className="flex cursor-pointer items-center space-x-1 text-white hover:text-gray-200">
-          <span>Features</span>
-          <ChevronDown className="h-4 w-4" />
-        </div>
-        <Link href="/pricing" className="text-white hover:text-gray-200">
-          Pricing
-        </Link>
-        <Link href="/doctors" className="text-white hover:text-gray-200">
-          Our doctors
-        </Link>
-      </div>
-
       <div className="flex items-center space-x-3">
-        <LandingUsableButton variant="secondary" size="md">
+        <LandingUsableButton
+          className="cursor-pointer"
+          variant="secondary"
+          size="md"
+          onClick={() => {
+            router.push("/app");
+          }}
+        >
           Get Started
         </LandingUsableButton>
       </div>

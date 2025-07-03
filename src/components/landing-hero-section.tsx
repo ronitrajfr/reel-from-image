@@ -1,7 +1,10 @@
+"use client";
 import Image from "next/image";
 import { LandingUsableButton } from "./landing-button";
+import { useRouter } from "next/navigation";
 
 export function HeroSection() {
+  const router = useRouter();
   return (
     <section className="flex flex-col items-center justify-center px-6 py-7">
       <div className="mx-auto max-w-4xl space-y-10 text-center">
@@ -14,17 +17,23 @@ export function HeroSection() {
         {/* Supporting Text */}
         <div className="mx-auto max-w-2xl text-lg text-white/90 md:text-xl">
           <p>
-            Write letters instantly that <strong>sound like you</strong>.
+            Create reels instantly that <strong>feel like you</strong>.
           </p>
-          <p>Enjoy unlimited, gold-standard transcriptions.</p>
+          <p>Skip the editor. Clean, fast, and effortless.</p>
           <p>
-            <strong>Save 5+ hours weekly</strong> on paperwork.
+            <strong>Just add media, write a caption</strong>, and you're done.
           </p>
         </div>
-
         {/* Buttons */}
         <div className="flex flex-col justify-center gap-4 sm:flex-row">
-          <LandingUsableButton variant="secondary" size="lg">
+          <LandingUsableButton
+            variant="secondary"
+            className="cursor-pointer"
+            size="lg"
+            onClick={() => {
+              router.push("/app");
+            }}
+          >
             Get Started
           </LandingUsableButton>
         </div>
