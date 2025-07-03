@@ -1,10 +1,11 @@
 "use client";
-import Image from "next/image";
+
 import { LandingUsableButton } from "./landing-button";
 import { useRouter } from "next/navigation";
 
 export function HeroSection() {
   const router = useRouter();
+
   return (
     <section className="flex flex-col items-center justify-center px-6 py-7">
       <div className="mx-auto max-w-4xl space-y-10 text-center">
@@ -24,6 +25,7 @@ export function HeroSection() {
             <strong>Just add media, write a caption</strong>, and you're done.
           </p>
         </div>
+
         {/* Buttons */}
         <div className="flex flex-col justify-center gap-4 sm:flex-row">
           <LandingUsableButton
@@ -39,17 +41,21 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Image */}
-      <div className="mx-auto mt-20 w-full max-w-5xl px-4">
+      {/* Video */}
+      <div className="mx-auto mt-20 w-full max-w-7xl px-4">
         <div className="relative">
-          <Image
-            src="/placeholder.svg?height=400&width=800"
-            alt="Before and after document comparison showing handwritten notes transforming into professional letters"
-            width={800}
-            height={400}
+          <video
+            src="/v2.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
             className="h-auto w-full rounded-lg shadow-2xl"
-          />
-          <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-black/30 to-transparent" />
+            style={{ aspectRatio: "800/400" }}
+          >
+            Your browser does not support the video tag.
+          </video>
+          <div className="inset-0 rounded-lg bg-gradient-to-t from-black/30 to-transparent" />
         </div>
       </div>
     </section>
