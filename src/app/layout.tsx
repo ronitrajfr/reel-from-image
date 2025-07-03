@@ -31,11 +31,11 @@ export default function RootLayout({
           {children}
           <Analytics />
         </body>
-        <Script
+        <script
           defer
           src="https://cloud.umami.is/script.js"
-          data-website-id="e7cb419a-5fb3-411c-a0d1-a32b08ae502f"
-        />
+          data-website-id="1cca7c37-508e-45ea-a047-192e15fa277a"
+        ></script>
       </Providers>
     </html>
   );
